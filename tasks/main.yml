@@ -1,0 +1,22 @@
+---
+# tasks file for ansible-polybar
+- name: Make sure config directory exists
+  file:
+    path: /home/{{user}}/.config/polybar
+    state: directory
+
+- name: Copy main polybar config
+  copy:
+    src: config
+    dest: /home/{{user}}/.config/polybar/config
+
+- name: Copy external scripts
+  copy:
+    src: {{item}}
+    dest: /home/{{user}}/polybar/{{item}}
+  with_items:
+    - weather
+    - mpris.sh
+    - pkg.sh
+
+
