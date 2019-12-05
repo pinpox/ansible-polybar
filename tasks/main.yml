@@ -12,8 +12,8 @@
 
 - name: Copy external scripts
   copy:
-    src: {{item}}
-    dest: /home/{{user}}/polybar/{{item}}
+    src: "{{item}}"
+    dest: /home/{{user}}/.config/polybar/{{item}}
   with_items:
     - weather
     - mpris.sh
