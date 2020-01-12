@@ -2,18 +2,18 @@
 # tasks file for ansible-polybar
 - name: Make sure config directory exists
   file:
-    path: /home/{{user}}/.config/polybar
+    path: "{{ansible_env.HOME}}/.config/polybar"
     state: directory
 
 - name: Copy main polybar config
   copy:
     src: config
-    dest: /home/{{user}}/.config/polybar/config
+    dest: "{{ansible_env.HOME}}/.config/polybar/config"
 
 - name: Copy external scripts
   copy:
     src: "{{item}}"
-    dest: /home/{{user}}/.config/polybar/{{item}}
+    dest: "{{ansible_env.HOME}}/.config/polybar/{{item}}"
   with_items:
     - weather
     - mpris.sh
