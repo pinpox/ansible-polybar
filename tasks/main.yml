@@ -28,3 +28,4 @@
   copy:
     src: launch_polybar
     dest: "{{ansible_env.HOME}}/.local/bin/launch_polybar"
+    mode: 755
