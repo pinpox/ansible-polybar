@@ -19,4 +19,12 @@
     - mpris.sh
     - pkg.sh
 
+- name: Make launch script directory exists
+  file:
+    path: "{{ansible_env.HOME}}/.local/bin"
+    state: directory
 
+- name: Copy launch script
+  copy:
+    src: launch_polybar
+    dest: "{{ansible_env.HOME}}/.local/bin/launch_polybar"
