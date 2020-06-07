@@ -52,7 +52,7 @@ font-1 = "fontawesome:pixelsize=8"
 ; separator = ""
 modules-left = i3
 modules-center = music
-modules-right = pkg weather filesystem backlight-acpi volume memory cpu wlan eth battery temperature date
+modules-right = pkg filesystem backlight-acpi volume memory cpu wlan eth battery temperature date
 
 tray-position = right
 tray-padding = 2
@@ -190,6 +190,7 @@ interval = 3.0
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
+format-connected-background = ${colors.color-8}
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
