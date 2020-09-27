@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # pecifying the icon(s) in the script
 # This allows us to change its appearance conditionally
