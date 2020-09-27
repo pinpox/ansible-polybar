@@ -51,7 +51,7 @@ font-1 = "fontawesome:pixelsize=8"
 ; separator = ""
 modules-left = i3
 modules-center = music
-modules-right = {% if checkupdates_present %} pkg {% endif %} filesystem backlight-acpi volume memory cpu wlan eth battery temperature date
+modules-right = {% if checkupdates_present.rc == 0 %} pkg {% endif %} filesystem backlight-acpi volume memory cpu wlan eth battery temperature date
 
 tray-position = right
 tray-padding = 2
