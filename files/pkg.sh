@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 pac=$(checkupdates | wc -l)
 aur=$(yay -Qum 2> /dev/null | wc -l)
 
