@@ -14,7 +14,7 @@
   copy:
     src: "{{item}}"
     dest: "{{ansible_env.HOME}}/.config/polybar/{{item}}"
-    mode: "0744"
+    mode: "0755"
   with_items:
     - weather
     - mpris.sh
